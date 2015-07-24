@@ -60,12 +60,12 @@ The styles are separated into 2 scss files:
 
 This allows you to override any variables defined in [custom-variables.less](https://github.com/sarink/material-ui-with-sass/blob/master/src/sass/variables/_custom-variables.scss) without having to modify material-ui-with-sass source files directly. For example, your main.scss file could look something like this:
 ```less
-@import "node_modules/material-ui/src/sass/scaffolding";
+@import "node_modules/material-ui-with-sass/src/sass/scaffolding";
 
 //Define a custom less file to override any variables defined in scaffolding.scss
 @import "my-custom-overrides.scss";
 
-@import "node_modules/material-ui/src/sass/components";
+@import "node_modules/material-ui-with-sass/src/sass/components";
 ```
 
 ## Examples
