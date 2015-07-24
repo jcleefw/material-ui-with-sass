@@ -7,3 +7,5 @@ build
 
 # Exclude compiled files
 lib
+
+.idea/**
