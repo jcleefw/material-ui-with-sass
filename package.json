@@ -1,7 +1,7 @@
 {
   "name": "material-ui-with-sass",
   "author": "Kabir Sarin",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Fork of v0.7.5 callemall's material-ui library, with sass instead of less",
   "main": "./lib",
   "keywords": [
@@ -31,10 +31,10 @@
     "react": ">=0.13"
   },
   "devDependencies": {
-    "react-tools": "^0.13",
     "browserify": "^7.0.3",
-    "reactify": "^0.17.1",
-    "react-router": "^0.13"
+    "react-router": "^1.0.0-beta3",
+    "react-tools": "^0.13",
+    "reactify": "^0.17.1"
   },
   "directories": {
     "doc": "docs",
