@@ -12,9 +12,9 @@ We recommend that you get started with the [React Library](http://facebook.githu
 
 ## Installation
 
-Material-UI is available as an [npm package](https://www.npmjs.org/package/material-ui).
+Material-UI is available as an [npm package](https://www.npmjs.org/package/material-ui-with-sass).
 ```sh
-npm install material-ui
+npm install material-ui-with-sass
 ```
 
 Use [browserify](http://browserify.org/) and [reactify](https://github.com/andreypopp/reactify) for dependency management and JSX transformation. The CSS framework is written in [Less](http://lesscss.org/), so you'll need to compile that as well. For [Sass](http://www.sass-lang.com) users, [material-ui-sass](https://github.com/gpbl/material-ui-sass) contains the .scss version of the Less framework. People working with [Stylus](http://learnboost.github.io/stylus/) can use [material-ui-stylus](https://github.com/Autarc/material-ui-stylus) to import
@@ -63,18 +63,18 @@ module.exports = MyAwesomeReactComponent;
 
 ## Customization
 
-The styles are separated into 2 less files:
-* src/less/scaffolding.less
-* src/less/components.less
+The styles are separated into 2 scss files:
+* src/sass/scaffolding.less
+* src/sass/components.less
 
-This allows you to override any variables defined in [custom-variables.less](https://github.com/callemall/material-ui/blob/master/src/less/variables/custom-variables.less) without having to modify material-ui source files directly. For example, your main.less file could look something like this:
+This allows you to override any variables defined in [custom-variables.less](https://github.com/sarink/material-ui-with-sass/blob/master/src/sass/variables/_custom-variables.scss) without having to modify material-ui-with-sass source files directly. For example, your main.scss file could look something like this:
 ```less
-@import "node_modules/material-ui/src/less/scaffolding.less";
+@import "node_modules/material-ui/src/sass/scaffolding";
 
-//Define a custom less file to override any variables defined in scaffolding.less
-@import "my-custom-overrides.less";
+//Define a custom less file to override any variables defined in scaffolding.scss
+@import "my-custom-overrides.scss";
 
-@import "node_modules/material-ui/src/less/components.less";
+@import "node_modules/material-ui/src/sass/components";
 ```
 
 ## Examples
