@@ -15,7 +15,7 @@ var DatePicker = React.createClass({
     formatDate: React.PropTypes.func,
     mode: React.PropTypes.oneOf(['portrait', 'landscape', 'inline']),
     onFocus: React.PropTypes.func,
-    onTouchTap: React.PropTypes.func,
+    onClick: React.PropTypes.func,
     onChange: React.PropTypes.func,
     onShow: React.PropTypes.func,
     onDismiss: React.PropTypes.func,
@@ -49,7 +49,7 @@ var DatePicker = React.createClass({
       formatDate,
       mode,
       onFocus,
-      onTouchTap,
+      onClick,
       onShow,
       onDismiss,
       minDate,
@@ -74,7 +74,7 @@ var DatePicker = React.createClass({
           ref="input"
           defaultValue={defaultInputValue}
           onFocus={this._handleInputFocus}
-          onTouchTap={this._handleInputTouchTap} />
+          onClick={this._handleInputClick} />
         <DatePickerDialog
           minDate={minDate} 
           maxDate={maxDate} 
@@ -110,13 +110,13 @@ var DatePicker = React.createClass({
     if (this.props.onFocus) this.props.onFocus(e);
   },
 
-  _handleInputTouchTap: function(e) {
+  _handleInputClick: function(e) {
     this.setState({
       dialogDate: this.getDate()
     });
 
     this.refs.dialogWindow.show();
-    if (this.props.onTouchTap) this.props.onTouchTap(e);
+    if (this.props.onClick) this.props.onClick(e);
   },
 
   _handleWindowKeyUp: function(e) {

@@ -9,8 +9,8 @@ var CalendarToolbar = React.createClass({
 
   propTypes: {
     displayDate: React.PropTypes.object.isRequired,
-    onLeftTouchTap: React.PropTypes.func,
-    onRightTouchTap: React.PropTypes.func,
+    onLeftClick: React.PropTypes.func,
+    onRightClick: React.PropTypes.func,
     maxDate: React.PropTypes.object,
     minDate: React.PropTypes.object
   },
@@ -77,14 +77,14 @@ var CalendarToolbar = React.createClass({
         <IconButton
           disabled={disableLeft}
           className="mui-date-picker-calendar-toolbar-button-left"
-          onTouchTap={this.props.onLeftTouchTap}>
+          onClick={this.props.onLeftClick}>
             <NavigationChevronLeft/>
         </IconButton>
 
         <IconButton
           disabled={disableRight}        
           className="mui-date-picker-calendar-toolbar-button-right"
-          onTouchTap={this.props.onRightTouchTap}>
+          onClick={this.props.onRightClick}>
             <NavigationChevronRight/>
         </IconButton>
 

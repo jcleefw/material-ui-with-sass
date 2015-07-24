@@ -9,7 +9,7 @@ var AppBar = React.createClass({
   mixins: [Classable],
 
   propTypes: {
-    onMenuIconButtonTouchTap: React.PropTypes.func,
+    onMenuIconButtonClick: React.PropTypes.func,
     showMenuIconButton: React.PropTypes.bool,
     iconClassNameLeft: React.PropTypes.string,
     iconElementLeft: React.PropTypes.element,
@@ -37,7 +37,7 @@ var AppBar = React.createClass({
 
   render: function() {
     var {
-      onTouchTap,
+      onClick,
       ...other
     } = this.props;
 
@@ -65,7 +65,7 @@ var AppBar = React.createClass({
           <IconButton
             className="mui-app-bar-navigation-icon-button"
             iconClassName={this.props.iconClassNameLeft}
-            onTouchTap={this._onMenuIconButtonTouchTap}>
+            onClick={this._onMenuIconButtonClick}>
               {child}
           </IconButton>
         );
@@ -84,8 +84,8 @@ var AppBar = React.createClass({
     );
   },
 
-  _onMenuIconButtonTouchTap: function(e) {
-    if (this.props.onMenuIconButtonTouchTap) this.props.onMenuIconButtonTouchTap(e);
+  _onMenuIconButtonClick: function(e) {
+    if (this.props.onMenuIconButtonClick) this.props.onMenuIconButtonClick(e);
   }
 
 });

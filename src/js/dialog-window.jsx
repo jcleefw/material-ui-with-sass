@@ -72,7 +72,7 @@ var DialogWindow = React.createClass({
           {this.props.children}
           {actions}
         </Paper>
-        <Overlay ref="dialogOverlay" show={this.state.open} autoLockScrolling={false} onTouchTap={this._handleOverlayTouchTap} />
+        <Overlay ref="dialogOverlay" show={this.state.open} autoLockScrolling={false} onClick={this._handleOverlayClick} />
       </div>
     );
   },
@@ -186,7 +186,7 @@ var DialogWindow = React.createClass({
     if (this.props.onDismiss) this.props.onDismiss();
   },
 
-  _handleOverlayTouchTap: function() {
+  _handleOverlayClick: function() {
     if (!this.props.modal) {
       this.dismiss();
       if (this.props.onClickAway) this.props.onClickAway();

@@ -8,13 +8,13 @@ var Tab = React.createClass({
   mixins: [Classable],
 
   propTypes: {
-    handleTouchTap: React.PropTypes.func,
+    handleClick: React.PropTypes.func,
     selected: React.PropTypes.bool
   },
 
 
-  handleTouchTap: function(){
-    this.props.handleTouchTap(this.props.tabIndex, this);
+  handleClick: function(){
+    this.props.handleClick(this.props.tabIndex, this);
   },
 
   render: function(){
@@ -27,7 +27,7 @@ var Tab = React.createClass({
     });
 
     return (
-    <div className={classes} style={styles} onTouchTap={this.handleTouchTap} routeName={this.props.route}>
+    <div className={classes} style={styles} onClick={this.handleClick} routeName={this.props.route}>
       {this.props.label}
     </div>
     )

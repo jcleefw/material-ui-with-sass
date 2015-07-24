@@ -60,7 +60,7 @@ var LeftNav = React.createClass({
       selectedIndex = this.props.selectedIndex,
       overlay;
 
-    if (!this.props.docked) overlay = <Overlay show={this.state.open} onTouchTap={this._onOverlayTouchTap} />;
+    if (!this.props.docked) overlay = <Overlay show={this.state.open} onClick={this._onOverlayClick} />;
 
     return (
       <div className={classes}>
@@ -92,7 +92,7 @@ var LeftNav = React.createClass({
     if (!this.props.docked) this.close();
   },
 
-  _onOverlayTouchTap: function() {
+  _onOverlayClick: function() {
     this.close();
   },
 

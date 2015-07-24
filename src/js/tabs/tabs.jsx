@@ -45,7 +45,7 @@ var Tabs = React.createClass({
     });
   },
 
-  handleTouchTap: function(tabIndex, tab){
+  handleClick: function(tabIndex, tab){
     if (this.props.onChange && this.state.selectedIndex !== tabIndex) {
       this.props.onChange(tabIndex, tab);
     }
@@ -70,7 +70,7 @@ var Tabs = React.createClass({
             selected: _this.state.selectedIndex === index,
             tabIndex: index,
             width: width,
-            handleTouchTap: _this.handleTouchTap
+            handleClick: _this.handleClick
           })
       } else {
         var type = tab.type.displayName || tab.type;

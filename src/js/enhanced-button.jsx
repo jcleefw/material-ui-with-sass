@@ -19,7 +19,7 @@ var EnhancedButton = React.createClass({
     linkButton: React.PropTypes.bool,
     onBlur: React.PropTypes.func,
     onFocus: React.PropTypes.func,
-    onTouchTap: React.PropTypes.func
+    onClick: React.PropTypes.func
   },
 
   windowListeners: {
@@ -42,7 +42,7 @@ var EnhancedButton = React.createClass({
       linkButton,
       onBlur,
       onFocus,
-      onTouchTap,
+      onClick,
       ...other } = this.props;
     var classes = this.getClasses('mui-enhanced-button', {
       'mui-is-disabled': disabled,
@@ -67,7 +67,7 @@ var EnhancedButton = React.createClass({
       disabled: disabled,
       onBlur: this._handleBlur,
       onFocus: this._handleFocus,
-      onTouchTap: this._handleTouchTap
+      onClick: this._handleClick
     };
     var buttonChildren = [
       disabled || disableTouchRipple ? this.props.children : touchRipple,
@@ -103,14 +103,14 @@ var EnhancedButton = React.createClass({
     if (!this.props.disabled) {
       if (e.keyCode == KeyCode.TAB) this._tabPressed = true;
       if (e.keyCode == KeyCode.ENTER && this.state.isKeyboardFocused) {
-        this._handleTouchTap(e);
+        this._handleClick(e);
       }
     }
   },
 
   _handleWindowKeyup: function(e) {
     if (!this.props.disabled && e.keyCode == KeyCode.SPACE && this.state.isKeyboardFocused) {
-      this._handleTouchTap(e);
+      this._handleClick(e);
     }
   },
 
@@ -142,7 +142,7 @@ var EnhancedButton = React.createClass({
     }
   },
 
-  _handleTouchTap: function(e) {
+  _handleClick: function(e) {
     this._cancelFocusTimeout();
     if (!this.props.disabled) {
       this._tabPressed = false;
@@ -150,7 +150,7 @@ var EnhancedButton = React.createClass({
         isKeyboardFocused: false
       });
      
-      if (this.props.onTouchTap) this.props.onTouchTap(e);
+      if (this.props.onClick) this.props.onClick(e);
     }
   },
 

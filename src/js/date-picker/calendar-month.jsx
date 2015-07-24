@@ -9,7 +9,7 @@ var CalendarMonth = React.createClass({
 
   propTypes: {
     displayDate: React.PropTypes.object.isRequired,
-    onDayTouchTap: React.PropTypes.func,
+    onDayClick: React.PropTypes.func,
     selectedDate: React.PropTypes.object.isRequired,
     maxDate: React.PropTypes.object,
     minDate: React.PropTypes.object,
@@ -62,14 +62,14 @@ var CalendarMonth = React.createClass({
           key={i}
           date={day}
           disabled={disabled}
-          onTouchTap={this._handleDayTouchTap}
+          onClick={this._handleDayClick}
           selected={selected} />
       );
     }, this);
   },
 
-  _handleDayTouchTap: function(e, date) {
-    if (this.props.onDayTouchTap) this.props.onDayTouchTap(e, date);
+  _handleDayClick: function(e, date) {
+    if (this.props.onDayClick) this.props.onDayClick(e, date);
   }
 
 });

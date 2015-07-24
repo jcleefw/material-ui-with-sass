@@ -41,12 +41,12 @@ var DatePickerDialog = React.createClass({
         key={0}
         label="Cancel"
         secondary={true}
-        onTouchTap={this._handleCancelTouchTap} />,
+        onClick={this._handleCancelClick} />,
       <FlatButton
         key={1}
         label="OK"
         secondary={true}
-        onTouchTap={this._handleOKTouchTap} />
+        onClick={this._handleOKClick} />
     ];
 
     if(this.props.autoOk){
@@ -83,15 +83,15 @@ var DatePickerDialog = React.createClass({
 
   _onSelectedDate: function(){
     if(this.props.autoOk){
-      setTimeout(this._handleOKTouchTap.bind(this), 300);
+      setTimeout(this._handleOKClick.bind(this), 300);
     }
   },
 
-  _handleCancelTouchTap: function() {
+  _handleCancelClick: function() {
     this.dismiss();
   },
 
-  _handleOKTouchTap: function() {
+  _handleOKClick: function() {
     this.dismiss();
     if (this.props.onAccept) {
       this.props.onAccept(this.refs.calendar.getSelectedDate());
@@ -122,7 +122,7 @@ var DatePickerDialog = React.createClass({
     if (this.refs.dialogWindow.isOpen()) {
       switch (e.keyCode) {
         case KeyCode.ENTER:
-          this._handleOKTouchTap();
+          this._handleOKClick();
           break;
       }
     }

@@ -14,7 +14,7 @@ var Snackbar = React.createClass({
     action: React.PropTypes.string,
     message: React.PropTypes.string.isRequired,
     openOnMount: React.PropTypes.bool,
-    onActionTouchTap: React.PropTypes.func
+    onActionClick: React.PropTypes.func
   },
 
   getInitialState: function() {
@@ -51,7 +51,7 @@ var Snackbar = React.createClass({
         <FlatButton
           className="mui-snackbar-action"
           label={this.props.action}
-          onTouchTap={this.props.onActionTouchTap} />
+          onClick={this.props.onActionClick} />
       );
     }
 

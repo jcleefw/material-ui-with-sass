@@ -71,8 +71,8 @@ var Calendar = React.createClass({
             minDate={this.props.minDate}
             maxDate={this.props.maxDate} 
             displayDate={this.state.displayDate}
-            onLeftTouchTap={this._handleLeftTouchTap}
-            onRightTouchTap={this._handleRightTouchTap} />
+            onLeftClick={this._handleLeftClick}
+            onRightClick={this._handleRightClick} />
 
           <ul className="mui-date-picker-calendar-week-title">
             <li className="mui-date-picker-calendar-week-title-day">S</li>
@@ -91,7 +91,7 @@ var Calendar = React.createClass({
               maxDate={this.props.maxDate} 
               key={this.state.displayDate.toDateString()}
               displayDate={this.state.displayDate}
-              onDayTouchTap={this._handleDayTouchTap}
+              onDayClick={this._handleDayClick}
               selectedDate={this.state.selectedDate} />
           </SlideInTransitionGroup>
         </div>
@@ -143,15 +143,15 @@ var Calendar = React.createClass({
     if(this.props.onSelectedDate) this.props.onSelectedDate(d);
   },
 
-  _handleDayTouchTap: function(e, date) {
+  _handleDayClick: function(e, date) {
     this._setSelectedDate(date);
   },
 
-  _handleLeftTouchTap: function() {
+  _handleLeftClick: function() {
     this._addDisplayDate(-1);
   },
 
-  _handleRightTouchTap: function() {
+  _handleRightClick: function() {
     this._addDisplayDate(1);
   },
 
