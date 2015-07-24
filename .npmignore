@@ -4,3 +4,5 @@ example
 
 # jsx Transform Disk Cache
 .module-cache
+
+.idea

@@ -1,7 +1,7 @@
 {
   "name": "material-ui-with-sass",
   "author": "Kabir Sarin",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Fork of v0.7.5 callemall's material-ui library, with sass instead of less",
   "main": "./lib",
   "keywords": [
