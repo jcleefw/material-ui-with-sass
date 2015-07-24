@@ -28,7 +28,7 @@
     "react-draggable2": "^0.5.1"
   },
   "peerDependencies": {
-    "react": ">=0.13"
+    "react": ">=0.13 || 0.14.0-beta1"
   },
   "devDependencies": {
     "browserify": "^7.0.3",
