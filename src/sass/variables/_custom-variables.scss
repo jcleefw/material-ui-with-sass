@@ -1,6 +1,3 @@
-// Feel free to change this file to customize your app.
-// This is place to put any variable overrides as well.
-
 //Typography
 $headingFontFamily: "Roboto", sans-serif !default;
 $contentFontFamily: "Roboto", sans-serif !default;
@@ -161,3 +158,6 @@ $slider-selection-color: $primary-3-color !default;
 // layout
 $app-bar-height: $desktop-keyline-increment !default;
 $left-nav-width: ($desktop-keyline-increment * 4) !default;
+
+// TODO remove this
+$mui-drop-down-right-offset: 24px !default;

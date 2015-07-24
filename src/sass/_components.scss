@@ -1,3 +1,6 @@
+// Variables
+@import "variables/custom-variables";
+
 // Core CSS
 @import "core/core";
 
@@ -7,3 +10,40 @@
 // Components
 @import "components/components";
 
+
+
+// TODO move these into their respective files
+
+// global mui overrides we would want everywhere
+// allow for multi-line menu text
+.mui-menu-item-data {
+  height: auto;
+}
+// fix the mui dropdown b/c they are bad at css, make it match the dropdowns on http://www.google.com/design/spec/components/menus.html#menus-usage
+.mui-drop-down-menu {
+  top: 10px;
+  margin-left: -$mui-drop-down-right-offset;
+  .mui-menu-drop-down-icon {
+    &, &.mui-svg-icon {
+      top: 31px;
+      right: 0;
+    }
+  }
+  .mui-menu.mui-visible {
+    height: auto !important;
+  }
+  .mui-menu-control {
+    .mui-menu-label {
+      top: 14px;
+      font-size: $input-font-size;
+      height: inherit;
+      overflow: hidden;
+    }
+    .mui-menu-control-underline {
+      margin: 0 0 0 $mui-drop-down-right-offset;
+    }
+    .mui-menu-control-bg {
+      background-color: transparent;
+    }
+  }
+}
