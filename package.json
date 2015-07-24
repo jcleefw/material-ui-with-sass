@@ -1,33 +1,28 @@
 {
-  "name": "material-ui",
-  "author": "Call-em-all Engineering Team",
-  "version": "0.7.5",
-  "description": "Material Design UI components built with React",
+  "name": "material-ui-with-sass",
+  "author": "Kabir Sarin",
+  "version": "0.0.1",
+  "description": "Fork of v0.7.5 callemall's material-ui library, with sass instead of less",
   "main": "./lib",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prebuild": "rm -rf lib",
-    "build:js": "./node_modules/.bin/jsx --harmony ./src ./lib",
-    "build:jsx": "./node_modules/.bin/jsx --harmony -x jsx ./src ./lib",
-    "build": "npm run build:js && npm run build:jsx",
-    "prepublish": "npm run build"
-  },
   "keywords": [
     "react",
     "react-component",
     "material design",
     "material-ui",
-    "material ui"
+    "material ui",
+    "material ui sass",
+    "material-ui-with-sass",
+    "material ui with sass"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/callemall/material-ui.git"
+    "url": "git+https://github.com/sarink/material-ui-with-sass.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/callemall/material-ui/issues"
+    "url": "https://github.com/sarink/material-ui-with-sass/issues"
   },
-  "homepage": "http://material-ui.com/",
+  "homepage": "https://github.com/sarink/material-ui-with-sass#readme",
   "dependencies": {
     "classnames": "^1.2.0",
     "react-draggable2": "^0.5.1"
@@ -41,5 +36,9 @@
     "browserify": "^7.0.3",
     "reactify": "^0.17.1",
     "react-router": "^0.13"
+  },
+  "directories": {
+    "doc": "docs",
+    "example": "example"
   }
 }
