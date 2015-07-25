@@ -43,7 +43,7 @@ Here are [some instructions](http://www.google.com/fonts#UsePlace:use/Collection
 (Hint: the absolute easiest way is to just add this one line to your scss: ``@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500);``)
 
 ## Usage
-Once material-ui is included in your project, you can use the components this way:
+Once material-ui-with-sass is included in your project, you can use the components this way:
 ```js
 /** MyAwesomeReactComponent.jsx */
 
