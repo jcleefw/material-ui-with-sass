@@ -31,7 +31,7 @@ var Master = React.createClass({
 
         <AppBar
           className="mui-dark-theme"
-          onMenuIconButtonTouchTap={this._onMenuIconButtonTouchTap}
+          onMenuIconButtonClick={this._onMenuIconButtonClick}
           title={title}
           zDepth={0}>
           {githubButton}
@@ -53,7 +53,7 @@ var Master = React.createClass({
     );
   },
 
-  _onMenuIconButtonTouchTap: function() {
+  _onMenuIconButtonClick: function() {
     this.refs.leftNav.toggle();
   }
   

@@ -130,8 +130,8 @@ var LeftNavPage = React.createClass({
         componentInfo={componentInfo}>
 
         <div className="left-nav-example">
-          <RaisedButton label="Toggle Docked Left Nav" onTouchTap={this._toggleDockedLeftNavClick} /><br/><br/>
-          <RaisedButton label="Show Hideable Left Nav" onTouchTap={this._showLeftNavClick} />
+          <RaisedButton label="Toggle Docked Left Nav" onClick={this._toggleDockedLeftNavClick} /><br/><br/>
+          <RaisedButton label="Show Hideable Left Nav" onClick={this._showLeftNavClick} />
           <LeftNav ref="dockedLeftNav" docked={this.state.isDocked} menuItems={menuItems} />
           <LeftNav ref="leftNav" docked={false} menuItems={menuItems} />
         </div>

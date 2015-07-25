@@ -35,11 +35,11 @@ var DialogPage = React.createClass({
       '  <FlatButton\n' +
       '    label="Cancel"\n' +
       '    secondary={true}\n' +
-      '    onTouchTap={this._handleCustomDialogCancel} />,\n' +
+      '    onClick={this._handleCustomDialogCancel} />,\n' +
       '  <FlatButton\n' +
       '    label="Submit"\n' +
       '    primary={true}\n' +
-      '    onTouchTap={this._handleCustomDialogSubmit} />\n' +
+      '    onClick={this._handleCustomDialogSubmit} />\n' +
       '];\n\n' +
       '<Dialog\n' +
       '  title="Dialog With Custom Actions"\n' +
@@ -133,12 +133,12 @@ var DialogPage = React.createClass({
         key={1}
         label="Cancel"
         secondary={true}
-        onTouchTap={this._handleCustomDialogCancel} />,
+        onClick={this._handleCustomDialogCancel} />,
       <FlatButton
         key={2}
         label="Submit"
         primary={true}
-        onTouchTap={this._handleCustomDialogSubmit} />
+        onClick={this._handleCustomDialogSubmit} />
     ];
 
     return (
@@ -147,9 +147,9 @@ var DialogPage = React.createClass({
         code={code}
         componentInfo={componentInfo}>
 
-        <RaisedButton label="Standard Actions" onTouchTap={this.handleStandardDialogTouchTap} />
+        <RaisedButton label="Standard Actions" onClick={this.handleStandardDialogClick} />
         <br/><br/>
-        <RaisedButton label="Custom Actions" onTouchTap={this.handleCustomDialogTouchTap} />
+        <RaisedButton label="Custom Actions" onClick={this.handleCustomDialogClick} />
 
         <Dialog
           ref="standardDialog"
@@ -192,11 +192,11 @@ var DialogPage = React.createClass({
     this.setState({modal: toggled});
   },
 
-  handleCustomDialogTouchTap: function() {
+  handleCustomDialogClick: function() {
     this.refs.customDialog.show();
   },
 
-  handleStandardDialogTouchTap: function() {
+  handleStandardDialogClick: function() {
     this.refs.standardDialog.show();
   }
 

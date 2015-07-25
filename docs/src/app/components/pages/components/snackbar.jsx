@@ -11,7 +11,7 @@ var SnackbarPage = React.createClass({
       '<Snackbar\n' + 
       '  message="Event added to your calendar"\n' + 
       '  action="undo"\n' + 
-      '  onActionTouchTap={this._handleAction}/>\n\n' +
+      '  onActionClick={this._handleAction}/>\n\n' +
       '//Somewhere in our code\n' +
       '_handleAction: function() {\n' +
       '  //We can add more code to this function, but for now we\'ll just include an alert.\n' +
@@ -61,7 +61,7 @@ var SnackbarPage = React.createClass({
         name: 'Events',
         infoArray: [
           {
-            name: 'onActionTouchTap',
+            name: 'onActionClick',
             header: 'function(e)',
             desc: 'Fired when the action button is touchtapped.'
           }
@@ -76,14 +76,14 @@ var SnackbarPage = React.createClass({
         componentInfo={componentInfo}>
 
         <RaisedButton 
-          onTouchTap={this._handleClick} 
+          onClick={this._handleClick}
           label="Add to my calendar" />
 
         <Snackbar 
           ref="snackbar" 
           message="Event added to your calendar"
           action="undo" 
-          onActionTouchTap={this._handleAction} />
+          onActionClick={this._handleAction} />
 
       </ComponentDoc>
     );
