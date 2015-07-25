@@ -22,7 +22,7 @@ var ColorsPage = React.createClass({
     return (
       <div>
         <h2 className="mui-font-style-headline">UI Color Palette</h2>
-        <p>We've created <a href="http://lesscss.org/">&#123;less&#125;</a> variables for every color used in the <a href="https://www.google.com/design/spec/style/color.html#color-ui-color-palette">UI Color Palette</a>.</p>
+        <p>We've created <a href="http://sass-lang.com/">&#123;sass&#125;</a> variables for every color used in the <a href="https://www.google.com/design/spec/style/color.html#color-ui-color-palette">UI Color Palette</a>.</p>
 
         <div className="color-palette">
           {colorGroups}
@@ -62,7 +62,7 @@ var ColorsPage = React.createClass({
   _getColorBlock: function(colorName, colorValue, colorTitle) {
     var colorClass = colorName + '-' + colorValue,
       classes = 'color ' + colorClass,
-      colorText = '@' + colorClass,
+      colorText = '$' + colorClass,
       blockTitle;
 
     if (colorTitle) blockTitle = <span className="name">{colorTitle}</span>;
