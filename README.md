@@ -5,10 +5,16 @@ material-ui-with-sass is a combination fork of [material-ui](https://github.com/
 Currently, it works with react >= 0.13, including 0.14.0-beta1
 
 ## Why?
+Because of [this decision](https://github.com/callemall/material-ui/issues/30).
 I'm in a situation where upgrading to material-ui v0.8 would've been too time-consuming to refactor the entire project in favor of their inline-js styles. And so, material-ui-with-sass was born. It's currently pretty far behind the original material-ui, but if you find this useful, please contribute! This repo could use some love.
 
 ## Documentation/Examples
 Check out our [github io site](http://sarink.github.io/material-ui-with-sass) for live examples. Although this looks identical to material-ui's demo site, it has been updated to reflect material-ui-with-sass's current state.
+
+## Notable Differences
+* Uses [SASS](http://sass-lang.com) instead of inline-styles or Less (obviously).
+* react-tap-event-plugin is no longer a dependency. Due to [this bug](https://github.com/zilverline/react-tap-event-plugin/issues/22) We have removed all references of "TouchTap" and replaced with "Click", for the time being.
+* [Tabs](http://sarink.github.io/material-ui-with-sass/#/components/tabs) have a new ``dynamicWidth`` property
 
 ## Installation
 material-ui-with-sass is available as an [npm package](https://www.npmjs.org/package/material-ui-with-sass).
