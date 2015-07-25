@@ -1,7 +1,7 @@
 {
-  "name": "material-ui-docs",
-  "version": "0.7.5",
-  "description": "Documentation site for material-ui",
+  "name": "material-ui-with-sass-docs",
+  "version": "0.0.8",
+  "description": "Documentation site for material-ui-with-sass",
   "repository": {
     "type": "git",
     "url": "https://github.com/sarink/material-ui-with-sass.git"
@@ -38,5 +38,6 @@
   },
   "dependencies": {
     "highlight.js": "^8.4.0"
-  }
+  },
+  "license": "MIT"
 }
