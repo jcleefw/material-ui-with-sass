@@ -68,6 +68,12 @@ var TabsPage = React.createClass({
             type: 'number',
             header: 'optional',
             desc: 'Specifiy tabWidth to set each tab to a set number of pixels. Tab Width is set by default to an even distribution of the parent Tabs container. If tabWidth is set but the total width of all tabs is greater than the container, tabWidth will revert back to default'
+          },
+          {
+            name: 'dynamicWidth',
+            type: 'number',
+            header: 'optional',
+            desc: 'Applies a percentage-width based on the number of children (ie, if there are 3 tabs, each one will have a width of 33%).'
           }
         ]
       },
