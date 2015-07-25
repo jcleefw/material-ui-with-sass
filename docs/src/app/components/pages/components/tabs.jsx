@@ -84,7 +84,7 @@ var TabsPage = React.createClass({
             name: 'onChange',
             type: 'function(tabIndex, tab)',
             header: 'optional',
-            desc: 'Fired on touch or tap of a tab.'
+            desc: 'Fired on click of a tab.'
           }
         ]
       },
@@ -112,7 +112,7 @@ var TabsPage = React.createClass({
             name: 'onActive',
             type: 'function(tab)',
             header: 'optional',
-            desc: 'Fired when the active tab changes by touch or tap. Use this event to specify any functionality when an active tab changes. For example - we are using this to route to home when the third tab becomes active. This function will always recieve the active tab as it\'s first argument.'
+            desc: 'Fired when the active tab changes by clicking. Use this event to specify any functionality when an active tab changes. For example - we are using this to route to home when the third tab becomes active. This function will always recieve the active tab as it\'s first argument.'
           }
         ]
       }
