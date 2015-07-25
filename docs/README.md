@@ -1,6 +1,6 @@
-# [Material-UI](http://callemall.github.io/material-ui/)
+# [Material-UI](http://sarink.github.io/material-ui-with-sass)
 
-This is the documentation site for [Material-UI](http://callemall.github.io/material-ui/).
+This is the documentation site for [Material-UI](http://sarink.github.io/material-ui-with-sass).
 
 ## Installation
 After cloning the repository, install dependencies:

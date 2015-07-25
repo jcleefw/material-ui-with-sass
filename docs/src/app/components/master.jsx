@@ -44,7 +44,7 @@ var Master = React.createClass({
         <div className="footer full-width-section mui-dark-theme">
           <p>
             Hand crafted with love by the engineers at <a href="http://call-em-all.com">Call-Em-All</a> and our 
-            awesome <a href="https://github.com/callemall/material-ui/graphs/contributors">contributors</a>.
+            awesome <a href="https://github.com/sarink/material-ui-with-sass/graphs/contributors">contributors</a>.
           </p>
           {githubButton}
         </div>

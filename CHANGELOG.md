@@ -126,13 +126,13 @@
   - The main motivation here is to give developers more control over which font icons to include
     in their project. Instead of automatically including all material design icons in material-ui,
     developers can now create their own custom icon font file and just pass the icon className into
-    the FontIcon component. [Read more about FontIcons](http://www.material-ui.com/#/components/icons).
+    the FontIcon component. [Read more about FontIcons](http://sarink.github.io/material-ui-with-sass/#/components/icons).
   - Upgrade path:
     - If you were using the Icon component before, you'll need switch to either using FontIcon or SvgIcon.
       For FontIcon, create a custom font file and include it in your project and just pass the Icon
       className into the FontIcon component. For SvgIcon, create a new React component that represents
       that particular icon. This will allow you to package your icons inside your js files. Examples
-      can be found [here](https://github.com/callemall/material-ui/tree/master/src/js/svg-icons).
+      can be found [here](https://github.com/sarink/material-ui-with-sass/tree/master/src/js/svg-icons).
     - Additionally, all components that had an icon prop now take an iconClassName prop instead. These
       include FloatingActionButton, IconButton, Menu, MenuItem, and DropDownIcon.
 
