@@ -16,7 +16,7 @@ var HomePage = React.createClass({
           <div className="home-page-hero-content">
             <img className="svg-logo" src="images/material-ui-logo.svg" />
             <div className="tagline">
-              <h1 className="brand-name">material ui</h1>
+              <h1 className="brand-name">material-ui-with-sass</h1>
               <h2 className="mui-font-style-headline">
                 A CSS Framework and a Set of React
                 Components <span className="no-wrap">that
@@ -26,18 +26,6 @@ var HomePage = React.createClass({
               <RaisedButton className="github-button" label="GitHub" linkButton={true} href="https://github.com/sarink/material-ui-with-sass" />
             </div>
           </div>
-        </div>
-
-        <div className="full-width-section home-purpose">
-          <p className="full-width-section-content">
-            Material-UI came about from our love of&nbsp;
-            <a href="http://facebook.github.io/react/">React</a> and&nbsp;
-            <a href="https://www.google.com/design/spec/material-design/introduction.html">
-              Google's Material Design
-            </a>. We're currently using it on a project at&nbsp;
-            <a href="https://www.call-em-all.com/">Call-Em-All</a> and plan on adding to it 
-            and making it better in the coming months.
-          </p>
         </div>
 
         <div className="full-width-section home-features">

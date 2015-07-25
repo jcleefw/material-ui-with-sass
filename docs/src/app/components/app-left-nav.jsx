@@ -22,7 +22,7 @@ var AppLeftNav = React.createClass({
   },
 
   render: function() {
-    var header = <div className="logo" onClick={this._onHeaderClick}>material ui</div>;
+    var header = <div className="logo" onClick={this._onHeaderClick}>material-ui-with-sass</div>;
 
     return (
       <mui.LeftNav 
