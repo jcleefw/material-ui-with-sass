@@ -43,7 +43,6 @@ var HomePage = React.createClass({
         <div className="full-width-section home-features">
 
           <div className="feature-container full-width-section-content">
-            <HomeFeature heading="Get Started" route="get-started" img="images/get-started.svg" />
             <HomeFeature heading="CSS Framework" route="css-framework" img="images/css-framework.svg" />
             <HomeFeature heading="Components" route="components" img="images/components.svg" />
           </div>

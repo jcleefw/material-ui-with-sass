@@ -3,7 +3,6 @@ var React = require('react'),
   mui = require('mui'),
 
   menuItems = [
-    { route: 'get-started', text: 'Get Started' },
     { route: 'css-framework', text: 'CSS Framework' },
     { route: 'components', text: 'Components' },
     { type: mui.MenuItem.Types.SUBHEADER, text: 'Resources' },

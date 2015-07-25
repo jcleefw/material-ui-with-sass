@@ -16,7 +16,6 @@ var LeftNavPage = React.createClass({
   render: function() {
 
     var menuItems = [
-      { route: 'get-started', text: 'Get Started' },
       { route: 'css-framework', text: 'CSS Framework' },
       { route: 'components', text: 'Components' },
       { type: MenuItem.Types.SUBHEADER, text: 'Resources' },
@@ -27,7 +26,6 @@ var LeftNavPage = React.createClass({
 
     var code =
       'menuItems = [\n' +
-      '  { route: \'get-started\', text: \'Get Started\' },\n' +
       '  { route: \'css-framework\', text: \'CSS Framework\' },\n' +
       '  { route: \'components\', text: \'Components\' },\n' +
       '  { type: MenuItem.Types.SUBHEADER, text: \'Resources\' },\n' +
