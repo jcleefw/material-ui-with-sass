@@ -13,6 +13,7 @@ Check out our [github io site](http://sarink.github.io/material-ui-with-sass) fo
 
 ## Notable Differences
 * Uses [SASS](http://sass-lang.com) instead of inline-styles or Less (obviously).
+* Material fonts and icons are automatically included (currently served from Google's CDN). There's also a handy new [Icon Component](http://sarink.github.io/material-ui-with-sass/#/components/icons)
 * react-tap-event-plugin is no longer a dependency. Due to [this bug](https://github.com/zilverline/react-tap-event-plugin/issues/22) We have removed all references of "TouchTap" and replaced with "Click", for the time being.
 * [Tabs](http://sarink.github.io/material-ui-with-sass/#/components/tabs) have a new ``dynamicWidth`` property
 
@@ -36,11 +37,6 @@ This allows you to override any variables defined in [_custom-variables.scss](ht
 
 @import "node_modules/material-ui-with-sass/src/sass/components";
 ```
-#### Roboto Font
-Be sure to include the [Roboto](http://www.google.com/fonts/specimen/Roboto) font in your project.
-Here are [some instructions](http://www.google.com/fonts#UsePlace:use/Collection:Roboto:400,300,500) on how to include it in your project.
-
-(Hint: the absolute easiest way is to just add this one line to your scss: ``@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,500);``)
 
 ## Usage
 Once material-ui-with-sass is included in your project, you can use the components this way:

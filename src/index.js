@@ -12,6 +12,7 @@ module.exports = {
   FloatingActionButton: require('./js/floating-action-button'),
   FontIcon: require('./js/font-icon'),
   IconButton: require('./js/icon-button'),
+  Icon: require('./js/icon'),
   Input: require('./js/input'),
   LeftNav: require('./js/left-nav'),
   Menu: require('./js/menu/menu'),

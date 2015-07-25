@@ -1,12 +1,21 @@
 var React = require('react');
 var mui = require('mui');
 var FontIcon = mui.FontIcon;
+var Icon = mui.Icon;
 var ComponentDoc = require('../../component-doc.jsx');
 var ActionHome = require('../../svg-icons/action-home.jsx');
 
 var FontIconPage = React.createClass({
 
 	render: function() {
+    var iconCode = '<Icon>face</Icon>';
+    var iconDesc = (
+      <p className="mui-font-style-subhead-1">
+        This component will render any Icon defined in <a title="Google's Material Design Icons" href="https://www.google.com/design/icons/">https://www.google.com/design/icons/</a>.
+        Simply type the name of the icon (the example above shows the 'face' icon). It's that easy.
+      </p>
+    );
+
     var fontIconCode =
       '<FontIcon className="muidocs-icon-action-home"/>';
 
@@ -56,6 +65,13 @@ var FontIconPage = React.createClass({
 
     return (
       <div>
+        <ComponentDoc
+          name="Icon"
+          code={iconCode}
+          desc={iconDesc}
+          componentInfo={componentInfo}>
+            <Icon>face</Icon>
+        </ComponentDoc>
         <ComponentDoc
           name="Font Icons"
           code={fontIconCode}
