@@ -23,7 +23,7 @@ var HomePage = React.createClass({
                 Implement</span> <span className="no-wrap">Google&apos;s Material Design</span>
               </h2>
               <RaisedButton className="demo-button" label="Demo" onClick={this._onDemoClick} linkButton={true} />
-              <RaisedButton className="github-button" label="GitHub" linkButton={true} href="https://github.com/callemall/material-ui" />
+              <RaisedButton className="github-button" label="GitHub" linkButton={true} href="https://github.com/sarink/material-ui-with-sass" />
             </div>
           </div>
         </div>
@@ -54,7 +54,7 @@ var HomePage = React.createClass({
             <h3>
               Want to help make this <span className="no-wrap">project awesome?</span> <span className="no-wrap">Check out our repo.</span>
             </h3>
-            <RaisedButton label="GitHub" primary={true} linkButton={true} href="https://github.com/callemall/material-ui" />
+            <RaisedButton label="GitHub" primary={true} linkButton={true} href="https://github.com/sarink/material-ui-with-sass" />
           </div>
         </div>
 

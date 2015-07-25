@@ -6,7 +6,7 @@ var React = require('react'),
     { route: 'css-framework', text: 'CSS Framework' },
     { route: 'components', text: 'Components' },
     { type: mui.MenuItem.Types.SUBHEADER, text: 'Resources' },
-    { type: mui.MenuItem.Types.LINK, payload: 'https://github.com/callemall/material-ui', text: 'GitHub' },
+    { type: mui.MenuItem.Types.LINK, payload: 'https://github.com/sarink/material-ui-with-sass', text: 'GitHub' },
     { type: mui.MenuItem.Types.LINK, payload: 'http://facebook.github.io/react', text: 'React' },
     { type: mui.MenuItem.Types.LINK, payload: 'https://www.google.com/design/spec/material-design/introduction.html', text: 'Material Design' }
   ];

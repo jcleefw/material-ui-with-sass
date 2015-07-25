@@ -19,7 +19,7 @@ var LeftNavPage = React.createClass({
       { route: 'css-framework', text: 'CSS Framework' },
       { route: 'components', text: 'Components' },
       { type: MenuItem.Types.SUBHEADER, text: 'Resources' },
-      { type: MenuItem.Types.LINK, payload: 'https://github.com/callemall/material-ui', text: 'GitHub' },
+      { type: MenuItem.Types.LINK, payload: 'https://github.com/sarink/material-ui-with-sass', text: 'GitHub' },
       { text: 'Disabled', disabled: true },
       { type: MenuItem.Types.LINK, payload: 'https://www.google.com', text: 'Disabled Link', disabled: true }
     ];
@@ -31,7 +31,7 @@ var LeftNavPage = React.createClass({
       '  { type: MenuItem.Types.SUBHEADER, text: \'Resources\' },\n' +
       '  { \n' +
       '     type: MenuItem.Types.LINK, \n' +
-      '     payload: \'https://github.com/callemall/material-ui\', \n' +
+      '     payload: \'https://github.com/sarink/material-ui-with-sass\', \n' +
       '     text: \'GitHub\' \n' +
       '  },\n' +
       '  { \n' +

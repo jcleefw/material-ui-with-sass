@@ -20,7 +20,7 @@ var ButtonPage = React.createClass({
       '  <input type="file" id="imageButton" className="example-image-input"></input>\n' +
       '</FlatButton>\n' +
       '<div className="button-example-container">\n' +
-      '  <FlatButton linkButton={true} href="https://github.com/callemall/material-ui" secondary={true}>\n' +
+      '  <FlatButton linkButton={true} href="https://github.com/sarink/material-ui-with-sass" secondary={true}>\n' +
       '    <FontIcon className="muidocs-icon-custom-github example-flat-button-icon"/>\n' +
       '    <span className="mui-flat-button-label">Github</span>\n' +
       '  </FlatButton>\n' +
@@ -35,7 +35,7 @@ var ButtonPage = React.createClass({
       '  <input type="file" id="imageButton" className="example-image-input"></input>\n' +
       '</RaisedButton>\n' +
       '<div className="button-example-container">\n' +
-      '  <RaisedButton linkButton={true} href="https://github.com/callemall/material-ui" secondary={true}>\n' +
+      '  <RaisedButton linkButton={true} href="https://github.com/sarink/material-ui-with-sass" secondary={true}>\n' +
       '    <FontIcon className="muidocs-icon-custom-github example-button-icon"/>\n' +
       '    <span className="mui-raised-button-label example-icon-button-label">Github</span>\n' +
       '  </RaisedButton>\n' +
@@ -45,7 +45,7 @@ var ButtonPage = React.createClass({
       '<FloatingActionButton iconClassName="muidocs-icon-action-grade" />\n' +
       '<FloatingActionButton iconClassName="muidocs-icon-action-grade" mini={true} />\n' +
       '<FloatingActionButton iconClassName="muidocs-icon-action-grade" disabled={true} />\n' +
-      '<FloatingActionButton iconClassName="muidocs-icon-custom-github" linkButton={true} href="https://github.com/callemall/material-ui" mini={true} secondary={true}/>' +
+      '<FloatingActionButton iconClassName="muidocs-icon-custom-github" linkButton={true} href="https://github.com/sarink/material-ui-with-sass" mini={true} secondary={true}/>' +
       '<FloatingActionButton iconClassName="muidocs-icon-action-grade" mini={true} disabled={true} />\n' +
       '<FloatingActionButton iconClassName="muidocs-icon-action-grade" secondary={true} />\n' +
       '<FloatingActionButton iconClassName="muidocs-icon-action-grade" mini={true} secondary={true} />';
@@ -178,7 +178,7 @@ var ButtonPage = React.createClass({
               </FlatButton>
             </div>
             <div className="button-example-container">
-              <FlatButton linkButton={true} href="https://github.com/callemall/material-ui" secondary={true}>
+              <FlatButton linkButton={true} href="https://github.com/sarink/material-ui-with-sass" secondary={true}>
                 <FontIcon className="muidocs-icon-custom-github example-flat-button-icon"/>
                 <span className="mui-flat-button-label example-icon-button-label">Github</span>
               </FlatButton>
@@ -205,7 +205,7 @@ var ButtonPage = React.createClass({
               </RaisedButton>
             </div>
             <div className="button-example-container">
-              <RaisedButton linkButton={true} href="https://github.com/callemall/material-ui" secondary={true}>
+              <RaisedButton linkButton={true} href="https://github.com/sarink/material-ui-with-sass" secondary={true}>
                 <FontIcon className="muidocs-icon-custom-github example-button-icon"/>
                 <span className="mui-raised-button-label example-icon-button-label">Github</span>
               </RaisedButton>
@@ -226,7 +226,7 @@ var ButtonPage = React.createClass({
               <FloatingActionButton iconClassName="muidocs-icon-action-grade" disabled={true} />
             </div>
             <div className="button-example-container">
-              <FloatingActionButton iconClassName="muidocs-icon-custom-github" linkButton={true} href="https://github.com/callemall/material-ui" mini={true} secondary={true}/>
+              <FloatingActionButton iconClassName="muidocs-icon-custom-github" linkButton={true} href="https://github.com/sarink/material-ui-with-sass" mini={true} secondary={true}/>
             </div>
             <div className="button-example-container">
               <FloatingActionButton iconClassName="muidocs-icon-action-grade" mini={true} disabled={true} />

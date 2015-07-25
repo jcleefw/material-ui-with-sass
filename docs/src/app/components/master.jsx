@@ -21,7 +21,7 @@ var Master = React.createClass({
       <IconButton
         className="github-icon-button"
         iconClassName="muidocs-icon-custom-github"
-        href="https://github.com/callemall/material-ui"
+        href="https://github.com/sarink/material-ui-with-sass"
         linkButton={true} />
     );
 
