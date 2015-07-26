@@ -13,11 +13,17 @@ module.exports = {
       dest + '/**'
     ]
   },
+  sass: {
+    src: mui + '/sass/mui.scss',
+    watch: [
+      mui + '/sass/**'
+    ],
+    dest: dest
+  },
   less: {
     src: src + '/less/main.less',
     watch: [
-      src + '/less/**',
-      mui + '/less/**'
+      src + '/less/**'
     ],
     dest: dest
   },
