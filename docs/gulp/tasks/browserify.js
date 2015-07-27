@@ -7,6 +7,7 @@
 */
 
 var browserify   = require('browserify');
+var babelify     = require('babelify');
 var watchify     = require('watchify');
 var bundleLogger = require('../util/bundleLogger');
 var gulp         = require('gulp');
@@ -29,7 +30,7 @@ gulp.task('browserify', function(callback) {
       extensions: config.extensions,
       // Enable source maps!
       debug: config.debug
-    });
+    }).transform(babelify.configure({optional: ["es7.objectRestSpread"]}));
 
     var bundle = function() {
       // Log when bundling starts
