@@ -1,0 +1,7 @@
+.mui-avatar {
+  @include circle(40px);
+  font-size: 22px;
+  font-weight: normal;
+  color: white;
+  background-color: grey;
+}
