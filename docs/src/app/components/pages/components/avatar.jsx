@@ -7,7 +7,7 @@ var ComponentDoc = require('../../component-doc.jsx');
 var AvatarPage = React.createClass({
   render: function() {
     var avatarCode = '<Avatar className="my-custom-avatar">KS</Avatar>\n\n' +
-                     '<Avatar className="my-custom-avatar"><Icon>face</Icon></Avatar>\n\n' +
+                     '<Avatar><Icon>face</Icon></Avatar>\n\n' +
                      '// in your css...\n' +
                      '.my-custom-avatar { background-color: red; }';
     var avatarDesc = (
