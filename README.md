@@ -28,6 +28,8 @@ The styles are separated into 2 sass files:
 * src/sass/scaffolding.scss
 * src/sass/components.scss
 
+*It is important that when you compile the sass that you use something like autoprefixer!*
+
 This allows you to override any variables defined in [_custom-variables.scss](https://github.com/sarink/material-ui-with-sass/blob/master/src/sass/variables/_custom-variables.scss) without having to modify material-ui-with-sass source files directly. For example, your main.scss file could look something like this:
 ```less
 @import "node_modules/material-ui-with-sass/src/sass/scaffolding";
