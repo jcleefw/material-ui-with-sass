@@ -71,7 +71,7 @@ var TabsPage = React.createClass({
           },
           {
             name: 'dynamicWidth',
-            type: 'number',
+            type: 'bool',
             header: 'optional',
             desc: 'Applies a percentage-width based on the number of children (ie, if there are 3 tabs, each one will have a width of 33%).'
           }

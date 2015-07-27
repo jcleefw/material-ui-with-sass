@@ -8,7 +8,8 @@ var Tabs = React.createClass({
   propTypes: {
     initialSelectedIndex: React.PropTypes.number,
     onActive: React.PropTypes.func,
-    tabWidth: React.PropTypes.number
+    tabWidth: React.PropTypes.number,
+    dynamicWidth: React.PropTypes.bool
   },
 
   getInitialState: function(){
@@ -61,6 +62,12 @@ var Tabs = React.createClass({
       this.state.width/this.props.children.length :
       this.props.tabWidth;
     var left = width * this.state.selectedIndex || 0;
+    if (this.props.dynamicWidth) {
+      width = this.state.fixed ? 100 / this.props.children.length : this.props.tabWidth;
+      left = width * this.state.selectedIndex || 0;
+      left += "%";
+      width += "%";
+    }
     var currentTemplate;
     var tabs = React.Children.map(this.props.children, function(tab, index){
       if(tab.type.displayName === "Tab"){
@@ -89,7 +96,7 @@ var Tabs = React.createClass({
         </TabTemplate>
       </div>
     )
-  },
+  }
 
 });
 
