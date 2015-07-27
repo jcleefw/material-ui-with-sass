@@ -9,6 +9,7 @@ var TouchRipple = React.createClass({
 
   propTypes: {
     centerRipple: React.PropTypes.bool,
+    outerClassName: React.PropTypes.string,
     className: React.PropTypes.string
   },
 
@@ -28,6 +29,7 @@ var TouchRipple = React.createClass({
 
     return (
       <div
+        className={this.props.outerClassName}
         onMouseUp={this._handleMouseUp}
         onMouseDown={this._handleMouseDown}
         onMouseOut={this._handleMouseOut}
