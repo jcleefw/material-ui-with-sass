@@ -23,6 +23,10 @@
       font-weight: 500;
       font: $headingFontFamily;
 
+      &.mui-tab-is-disabled {
+        cursor: not-allowed;
+        color: $disabled-color;
+      }
 
       &.mui-tab-is-active {
         color: $tabs-active-item-color;

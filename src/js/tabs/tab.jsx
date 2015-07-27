@@ -9,12 +9,13 @@ var Tab = React.createClass({
 
   propTypes: {
     handleClick: React.PropTypes.func,
-    selected: React.PropTypes.bool
+    selected: React.PropTypes.bool,
+    disabled: React.PropTypes.bool
   },
 
 
   handleClick: function(){
-    this.props.handleClick(this.props.tabIndex, this);
+    if (!this.props.disabled) this.props.handleClick(this.props.tabIndex, this);
   },
 
   render: function(){
@@ -23,7 +24,8 @@ var Tab = React.createClass({
     };
 
     var classes = this.getClasses('mui-tab-item', {
-      'mui-tab-is-active': this.props.selected
+      'mui-tab-is-active': this.props.selected,
+      'mui-tab-is-disabled' : this.props.disabled
     });
 
     return (
