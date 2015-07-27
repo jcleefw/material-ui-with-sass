@@ -32,7 +32,7 @@
     "gulp-sourcemaps": "^1.2.8",
     "gulp-util": "^3.0.1",
     "pretty-hrtime": "^0.2.2",
-    "require-dir": "^0.1.0",
+    "require-dir": "^0.3.0",
     "underscore": "^1.7.0",
     "vinyl-source-stream": "^1.0.0",
     "watchify": "^2.2.1"
