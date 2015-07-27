@@ -15,7 +15,7 @@ var AppBar = React.createClass({
     iconElementLeft: React.PropTypes.element,
     iconElementRight: React.PropTypes.element,
     title : React.PropTypes.node,
-    zDepth: React.PropTypes.number,
+    zDepth: React.PropTypes.number
   },
 
   getDefaultProps: function() {
@@ -36,35 +36,31 @@ var AppBar = React.createClass({
   },
 
   render: function() {
-    var {
-      onClick,
-      ...other
-    } = this.props;
+    var { title, className, onMenuIconButtonClick, showMenuIconButton, iconClassNameLeft, iconElementLeft, iconElementRight, zDepth, ...other } = this.props;
 
-    var classes = this.getClasses('mui-app-bar'),
-      title, menuElementLeft, menuElementRight;
+    var classes = this.getClasses('mui-app-bar'), menuElementLeft, menuElementRight;
 
     if (this.props.title) {
       // If the title is a string, wrap in an h1 tag.
       // If not, just use it as a node.
-      title = Object.prototype.toString.call(this.props.title) === '[object String]' ?
-        <h1 className="mui-app-bar-title">{this.props.title}</h1> :
-        this.props.title;
+      title = Object.prototype.toString.call(title) === '[object String]' ?
+              <h1 className="mui-app-bar-title">{title}</h1> :
+              title;
     }
 
-    if (this.props.showMenuIconButton) {
-      if (this.props.iconElementLeft) {
+    if (showMenuIconButton) {
+      if (iconElementLeft) {
         menuElementLeft = (
           <div className="mui-app-bar-navigation-icon-button">
-            {this.props.iconElementLeft}
+            {iconElementLeft}
           </div>
         );
       } else {
-        var child = (this.props.iconClassNameLeft) ? '' : <NavigationMenu/>;
+        var child = (iconClassNameLeft) ? '' : <NavigationMenu/>;
         menuElementLeft = (
           <IconButton
             className="mui-app-bar-navigation-icon-button"
-            iconClassName={this.props.iconClassNameLeft}
+            iconClassName={iconClassNameLeft}
             onClick={this._onMenuIconButtonClick}>
               {child}
           </IconButton>
@@ -73,10 +69,10 @@ var AppBar = React.createClass({
     }
 
     menuElementRight = (this.props.children) ? this.props.children :
-                       (this.props.iconElementRight) ? this.props.iconElementRight : '';
+                       (iconElementRight) ? iconElementRight : '';
 
     return (
-      <Paper rounded={false} className={classes} zDepth={this.props.zDepth}>
+      <Paper {...other} rounded={false} className={classes} zDepth={zDepth}>
         {menuElementLeft}
         {title}
         {menuElementRight}
