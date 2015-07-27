@@ -1,8 +1,8 @@
 {
   "name": "material-ui-with-sass",
   "author": "Kabir Sarin",
-  "version": "0.0.8",
-  "description": "Fork of v0.7.5 callemall's material-ui library, that still uses traditional css (well, sass) for styling.",
+  "version": "0.0.9",
+  "description": "",
   "main": "./src/index",
   "keywords": [
     "react",
