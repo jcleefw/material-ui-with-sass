@@ -16,6 +16,7 @@ Check out our [github io site](http://sarink.github.io/material-ui-with-sass) fo
 * Material fonts and icons are automatically included (currently served from Google's CDN). There's also a handy new [Icon Component](http://sarink.github.io/material-ui-with-sass/#/components/icons)
 * react-tap-event-plugin is no longer a dependency. Due to [this bug](https://github.com/zilverline/react-tap-event-plugin/issues/22) We have removed all references of "TouchTap" and replaced with "Click", for the time being.
 * [Tabs](http://sarink.github.io/material-ui-with-sass/#/components/tabs) have a new ``dynamicWidth`` property
+* We've added a [SpeedDial](http://www.google.com/design/spec/components/buttons-floating-action-button.html#buttons-floating-action-button-transitions) to our [FloatingActionButton](http://sarink.github.io/material-ui-with-sass/#/components/buttons)
 
 ## Installation
 material-ui-with-sass is available as an [npm package](https://www.npmjs.org/package/material-ui-with-sass).
