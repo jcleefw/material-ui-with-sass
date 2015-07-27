@@ -35,6 +35,17 @@ var TabsPage = React.createClass({
                 '      </p> \n' +
                 '    </div> \n' +
                 '  </Tab> \n' +
+                '  <Tab label="Item Three" disabled="true"> \n' +
+                '    <div className="tab-template-container"> \n' +
+                '      <h2 className="mui-font-style-headline">Tab Two Template Example</h2> \n' +
+                '      <p> \n' +
+                '        This is another example of a tab template! \n' +
+                '      </p> \n' +
+                '      <p> \n' +
+                '        Fair warning - the next tab routes to home! \n' +
+                '      </p> \n' +
+                '    </div> \n' +
+                '  </Tab> \n' +
                 '  <Tab \n' +
                 '    label="Item Three" \n' +
                 '    route="home" \n' +
@@ -102,6 +113,12 @@ var TabsPage = React.createClass({
             type: 'string',
             header: 'optional',
             desc: 'Specifies a router RouteName if included.'
+          },
+          {
+            name: 'disabled',
+            type: 'bool',
+            header: 'default: false',
+            desc: 'Specifies if the tab can be activated or not. Adds a mui-tab-is-disabled class'
           }
         ]
       },
@@ -145,7 +162,14 @@ var TabsPage = React.createClass({
                   This is another example of a tab template!
                 </p>
                 <p>
-                  Fair warning - the next tab routes to home!
+                  Fair warning - the last tab routes to home!
+                </p>
+              </div>
+            </Tab>
+            <Tab label='Item Three' disabled={true} >
+              <div className='tab-template-container'>
+                <p>
+                  How'd you get in here? Hacker!
                 </p>
               </div>
             </Tab>
