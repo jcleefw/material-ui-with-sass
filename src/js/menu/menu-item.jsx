@@ -23,7 +23,6 @@ var MenuItem = React.createClass({
     toggle: React.PropTypes.bool,
     disabled: React.PropTypes.bool,
     onClick: React.PropTypes.func,
-    onClick: React.PropTypes.func,
     onToggle: React.PropTypes.func,
     selected: React.PropTypes.bool
   },
@@ -49,7 +48,6 @@ var MenuItem = React.createClass({
     var iconRight;
     var attribute;
     var number;
-    var toggle;
 
     if (this.props.iconClassName) icon = <FontIcon className={'mui-menu-item-icon ' + this.props.iconClassName} />;
     if (this.props.iconRightClassName) iconRight = <FontIcon className={'mui-menu-item-icon-right ' + this.props.iconRightClassName} />;
@@ -73,8 +71,7 @@ var MenuItem = React.createClass({
       <div
         key={this.props.index}
         className={classes}
-        onClick={this._handleClick}
-        onClick={this._handleOnClick}>
+        onClick={this._handleClick}>
 
         {icon}
         {this.props.children}
@@ -89,10 +86,6 @@ var MenuItem = React.createClass({
   },
 
   _handleClick: function(e) {
-    if (!this.props.disabled && this.props.onClick) this.props.onClick(e, this.props.index);
-  },
-
-  _handleOnClick: function(e) {
     if (!this.props.disabled && this.props.onClick) this.props.onClick(e, this.props.index);
   },
 
