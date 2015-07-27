@@ -5,6 +5,7 @@ var Components = React.createClass({
 
   render: function() {
     var menuItems = [
+      { route: 'avatar', text: 'Avatar'},
       { route: 'buttons', text: 'Buttons'},
       { route: 'date-picker', text: 'Date Picker'},
       { route: 'dialog', text: 'Dialog'},

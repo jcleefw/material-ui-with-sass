@@ -15,6 +15,7 @@ var Colors = require('./components/pages/css-framework/colors.jsx');
 var Typography = require('./components/pages/css-framework/typography.jsx');
 
 var Components = require('./components/pages/components.jsx');
+var Avatar = require('./components/pages/components/avatar.jsx');
 var Buttons = require('./components/pages/components/buttons.jsx');
 var DatePicker = require('./components/pages/components/date-picker.jsx');
 var Dialog = require('./components/pages/components/dialog.jsx');
@@ -51,6 +52,7 @@ var AppRoutes = (
     </Route>
 
     <Route name="components" handler={Components}>
+      <Route name="avatar" handler={Avatar} />
       <Route name="buttons" handler={Buttons} />
       <Route name="date-picker" handler={DatePicker} />
       <Route name="dialog" handler={Dialog} />
