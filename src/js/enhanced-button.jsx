@@ -19,7 +19,8 @@ var EnhancedButton = React.createClass({
     linkButton: React.PropTypes.bool,
     onBlur: React.PropTypes.func,
     onFocus: React.PropTypes.func,
-    onClick: React.PropTypes.func
+    onClick: React.PropTypes.func,
+    rippleOuterClassName: React.PropTypes.string
   },
 
   windowListeners: {
@@ -51,6 +52,7 @@ var EnhancedButton = React.createClass({
     });
     var touchRipple = (
       <TouchRipple
+        outerClassName={this.props.rippleOuterClassName}
         ref="touchRipple"
         key="touchRipple"
         centerRipple={centerRipple}>
