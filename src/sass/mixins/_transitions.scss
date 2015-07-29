@@ -1,3 +1,11 @@
+@mixin transition($transition-property, $transition-time, $method) {
+  -webkit-transition: $transition-property $transition-time $method;
+  -moz-transition: $transition-property $transition-time $method;
+  -ms-transition: $transition-property $transition-time $method;
+  -o-transition: $transition-property $transition-time $method;
+  transition: $transition-property $transition-time $method;
+}
+
 $ease-out-function: cubic-bezier(0.23, 1, 0.32, 1);
 
 @mixin ease-out($duration: 450ms, $property: all, $delay: 0ms) {

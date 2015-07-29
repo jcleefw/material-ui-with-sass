@@ -1,4 +1,8 @@
 module.exports = {
+  AccordionContainer: require('./js/accordion-container'),
+  AccordionItem: require('./js/accordion-item'),
+  AccordionHeader: require('./js/accordion-header'),
+  AccordionContent: require('./js/accordion-content'),
   AppBar: require('./js/app-bar'),
   AppCanvas: require('./js/app-canvas'),
   Avatar: require('./js/avatar'),

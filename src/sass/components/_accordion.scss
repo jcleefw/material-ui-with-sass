@@ -1,0 +1,61 @@
+.mui-accordion-container { }
+
+.mui-accordion-item {
+  background-color: $white;
+  color: $grey-600;
+  @include transition(all, 350ms, linear);
+
+  &.mui-accordion-item-is-open {
+    margin: 15px -15px;
+
+    .mui-accordion-item-content {
+      max-height: 1000px;
+    }
+  }
+
+  &.mui-accordion-item-is-closed {
+    &:not(:last-child) {
+      border-bottom: 1px solid $accordion-header-border-color;
+    }
+
+    .mui-accordion-item-content {
+      max-height: 0;
+      overflow-y: hidden;
+    }
+  }
+
+  .mui-accordion-item-content {
+    padding: 0 15px 0 15px;
+    @include transition(all, 200ms, cubic-bezier(0, 1, 0.5, 1));
+  }
+
+}
+
+.mui-accordion-item-header {
+  @extend %mui-font-style-title;
+  margin: 0;
+  &:hover {
+    cursor: pointer;
+    background-color: $accordion-header-hover-color;
+  }
+  @include transition(background-color, 175ms, linear);
+  height: $accordion-header-height;
+
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  cursor: pointer;
+  vertical-align: top;
+  padding: 0 5px 0 5px;
+
+}
+
+//.accordion-item-header-buttons {
+//  margin-left: auto; // this is how we float:right with flex, i guess
+//  display: flex;
+//  align-items: center;
+//  justify-content: center;
+//}
