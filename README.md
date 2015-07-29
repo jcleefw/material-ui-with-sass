@@ -12,11 +12,12 @@ I'm in a situation where upgrading to material-ui v0.8 would've been too time-co
 Check out our [github io site](http://sarink.github.io/material-ui-with-sass) for live examples. Although this looks identical to material-ui's demo site, it has been updated to reflect material-ui-with-sass's current state.
 
 ## Notable Differences
-* Uses [SASS](http://sass-lang.com) instead of inline-styles or Less (obviously).
+* Uses [SASS](http://sass-lang.com) instead of inline-styles or Less (obviously)
+* New [Accordion Component!](http://sarink.github.io/material-ui-with-sass/#/components/accordion)
 * We've added a [SpeedDial](http://www.google.com/design/spec/components/buttons-floating-action-button.html#buttons-floating-action-button-transitions) to our [FloatingActionButton](http://sarink.github.io/material-ui-with-sass/#/components/buttons)
 * Material fonts and icons are automatically included (from Google's CDN). Plus, a handy new [Icon Component](http://sarink.github.io/material-ui-with-sass/#/components/icons)
 * [Tabs](http://sarink.github.io/material-ui-with-sass/#/components/tabs) are more customizable
-* react-tap-event-plugin is no longer a dependency. Due to [this bug](https://github.com/zilverline/react-tap-event-plugin/issues/22) We have removed all references of "TouchTap" and replaced with "Click", for the time being.
+* react-tap-event-plugin is no longer a dependency. Due to [this bug](https://github.com/zilverline/react-tap-event-plugin/issues/22) We have removed all references of "TouchTap" and replaced with "Click", for the time being
 
 ## Installation
 material-ui-with-sass is available as an [npm package](https://www.npmjs.org/package/material-ui-with-sass).

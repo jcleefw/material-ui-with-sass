@@ -15,6 +15,7 @@ var Colors = require('./components/pages/css-framework/colors.jsx');
 var Typography = require('./components/pages/css-framework/typography.jsx');
 
 var Components = require('./components/pages/components.jsx');
+var Accordion = require('./components/pages/components/accordion.jsx');
 var AppBar = require('./components/pages/components/app-bar.jsx');
 var Avatar = require('./components/pages/components/avatar.jsx');
 var Buttons = require('./components/pages/components/buttons.jsx');
@@ -53,6 +54,7 @@ var AppRoutes = (
     </Route>
 
     <Route name="components" handler={Components}>
+      <Route name="accordion" handler={Accordion} />
       <Route name="app-bar" handler={AppBar} />
       <Route name="avatar" handler={Avatar} />
       <Route name="buttons" handler={Buttons} />

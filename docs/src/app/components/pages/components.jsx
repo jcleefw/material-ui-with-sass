@@ -5,6 +5,7 @@ var Components = React.createClass({
 
   render: function() {
     var menuItems = [
+      { route: 'accordion', text: 'Accordion'},
       { route: 'app-bar', text: 'AppBar'},
       { route: 'avatar', text: 'Avatar'},
       { route: 'buttons', text: 'Buttons'},
