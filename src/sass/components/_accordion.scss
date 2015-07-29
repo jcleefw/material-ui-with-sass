@@ -6,14 +6,26 @@
   @include transition(all, 350ms, linear);
 
   &.mui-accordion-item-is-open {
+    & > .mui-paper-container {
+      padding: 10px;
+    }
     margin: 15px -15px;
 
     .mui-accordion-item-content {
       max-height: 1000px;
     }
+
+    .mui-accordion-item-header {
+      border-radius: 0;
+      border-bottom: 1px solid $accordion-header-border-color;
+    }
   }
 
   &.mui-accordion-item-is-closed {
+    & > .mui-paper-container {
+      padding: 0;
+    }
+
     &:not(:last-child) {
       border-bottom: 1px solid $accordion-header-border-color;
     }
@@ -21,6 +33,11 @@
     .mui-accordion-item-content {
       max-height: 0;
       overflow-y: hidden;
+    }
+
+    .mui-accordion-item-header {
+      &:hover {
+      }
     }
   }
 
@@ -36,7 +53,6 @@
   margin: 0;
   &:hover {
     cursor: pointer;
-    background-color: $accordion-header-hover-color;
   }
   @include transition(background-color, 175ms, linear);
   height: $accordion-header-height;
@@ -49,7 +65,7 @@
 
   cursor: pointer;
   vertical-align: top;
-  padding: 0 5px 0 5px;
+  padding: 0 10px 0 10px;
 
 }
 
