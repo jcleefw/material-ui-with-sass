@@ -26,7 +26,7 @@ var AvatarPage = React.createClass({
 
       '  <AccordionItem>\n' +
       '    <AccordionHeader>\n' +
-      '      <div style={{fontSize: 12, color: red}}>You can style the header however you want, and render your own html</div>\n' +
+      '      <div style={{fontSize: 15, color: red}}>You can style the header however you want, and render your own html</div>\n' +
       '    </AccordionHeader>\n' +
       '    <AccordionContent>\n' +
       '      <p>You can style the content however you like also</p>\n' +
@@ -115,7 +115,7 @@ var AvatarPage = React.createClass({
               </AccordionContent>
             </AccordionItem>
             <AccordionItem>
-              <AccordionHeader><div style={{color:"red", fontSize: 12}}>You can style the header however you want, and render your own html</div></AccordionHeader>
+              <AccordionHeader><div style={{color:"red", fontSize: 15}}>You can style the header however you want, and render your own html</div></AccordionHeader>
               <AccordionContent>
                 <br/>
                 <b>Some AccordionContent</b> <br/><br/>
