@@ -248,6 +248,8 @@ var FloatingActionButton = React.createClass({
     var self = this;
     this.setState({showSpeedDial: true, willHideSpeedDial: false});
     ReactDOM.findDOMNode(this.refs.button).style.transform = "rotate(" + this.props.speedDialTransitionRotate + "deg)";
+    ReactDOM.findDOMNode(this.refs.button).style.WebkitTransform = "rotate(" + this.props.speedDialTransitionRotate + "deg)";
+    ReactDOM.findDOMNode(this.refs.button).style.msTransform = "rotate(" + this.props.speedDialTransitionRotate + "deg)";
     _.delay(function() {
       self.setState({text: self.props.speedDialOpenText});
     }, self.props.speedDialTransitionTime);
@@ -262,6 +264,8 @@ var FloatingActionButton = React.createClass({
           if (self.state.willHideSpeedDial) {
             self.setState({showSpeedDial: false, willHideSpeedDial: false});
             ReactDOM.findDOMNode(self.refs.button).style.transform = "rotate(0deg)";
+            ReactDOM.findDOMNode(self.refs.button).style.WebkitTransform = "rotate(0deg)";
+            ReactDOM.findDOMNode(self.refs.button).style.msTransform = "rotate(0deg)";
             _.delay(function () {
               self.setState({text: self.props.text});
             }, self.props.speedDialTransitionTime);
