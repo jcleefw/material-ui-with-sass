@@ -1,7 +1,21 @@
 .mui-avatar {
-  @include circle(40px);
-  font-size: 22px;
-  font-weight: normal;
+  $diameter: 40px;
+  @include circle($diameter);
+  @include display-center();
+
+  @extend %mui-font-style-headline;
+  margin: 0;
+  padding: 0;
+
   color: white;
   background-color: grey;
+
+  * {
+    @include display-center();
+  }
+
+  img {
+    @include clip-circle($diameter);
+    background-color: transparent;
+  }
 }
