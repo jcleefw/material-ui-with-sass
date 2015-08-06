@@ -139,7 +139,8 @@ var FloatingActionButton = React.createClass({
       tooltipShown: false,
       showSpeedDial: false,
       text: this.props.text,
-      speedDialIsPinned: false
+      speedDialIsPinned: false,
+      speedDialTimeout: null
     };
   },
 
@@ -155,7 +156,7 @@ var FloatingActionButton = React.createClass({
       speedDialVisibleTime: 2000,
       isSpeedDialButton: false,
       speedDialDirection: "up"
-    }
+    };
   },
 
   propTypes: {
@@ -232,21 +233,27 @@ var FloatingActionButton = React.createClass({
     if (this.props.onFocus) this.props.onFocus(e);
   },
 
-  _handleMouseOut: function(e) {
+  _handleMouseLeave: function(e) {
     this.hideTooltip();
     if (this.props.useSpeedDial) this.hideSpeedDial();
-    if (this.props.onMouseOut) this.props.onMouseOut(e);
+    if (this.props.onMouseLeave) this.props.onMouseLeave(e);
   },
 
-  _handleMouseOver: function(e) {
+  _handleMouseEnter: function(e) {
     this.showTooltip();
     if (this.props.useSpeedDial) this.showSpeedDial();
-    if (this.props.onMouseOver) this.props.onMouseOver(e);
+    if (this.props.onMouseEnter) this.props.onMouseEnter(e);
   },
 
   showSpeedDial: function() {
     var self = this;
     this.setState({showSpeedDial: true, willHideSpeedDial: false});
+
+    // Cancel pending closure of the speed dial if the user's shown it again
+    if (this.state.speedDialTimeout) {
+        clearTimeout(this.state.speedDialTimeout);
+    }
+
     ReactDOM.findDOMNode(this.refs.button).style.transform = "rotate(" + this.props.speedDialTransitionRotate + "deg)";
     ReactDOM.findDOMNode(this.refs.button).style.WebkitTransform = "rotate(" + this.props.speedDialTransitionRotate + "deg)";
     ReactDOM.findDOMNode(this.refs.button).style.msTransform = "rotate(" + this.props.speedDialTransitionRotate + "deg)";
@@ -260,7 +267,7 @@ var FloatingActionButton = React.createClass({
       var self = this;
       this.setState({willHideSpeedDial: true});
       if (this.state.showSpeedDial) {
-        _.delay(function () {
+        var timeout = setTimeout(function () {
           if (self.state.willHideSpeedDial) {
             self.setState({showSpeedDial: false, willHideSpeedDial: false});
             ReactDOM.findDOMNode(self.refs.button).style.transform = "rotate(0deg)";
@@ -271,6 +278,8 @@ var FloatingActionButton = React.createClass({
             }, self.props.speedDialTransitionTime);
           }
         }, self.props.speedDialVisibleTime);
+
+        this.setState({ speedDialTimeout: timeout });
       }
     }
   },
@@ -278,7 +287,11 @@ var FloatingActionButton = React.createClass({
   togglePinnedSpeedDial: function() {
     var pinned = !this.state.speedDialIsPinned;
     this.setState({speedDialIsPinned: pinned});
-    (pinned) ? this.showSpeedDial() : this.hideSpeedDial();
+
+    if (pinned)
+        this.showSpeedDial();
+    else
+        this.hideSpeedDial();
   },
 
   _handleClick: function(e) {
@@ -286,9 +299,9 @@ var FloatingActionButton = React.createClass({
     if (this.props.onClick) this.props.onClick(e);
   },
 
-  renderSpeedDialButton(speedDialButton, i) {
+  renderSpeedDialButton: function(speedDialButton, i) {
     var className = (speedDialButton.className || "") + " mui-speed-dial-button";
-    return <FloatingActionButton key={"speedDialButton-"+i} {...speedDialButton} className={className} parent={this} mini={true} onMouseOver={this.showSpeedDial} onMouseOut={this.hideSpeedDial} useSpeedDial={false} isSpeedDialButton={true} />
+    return <FloatingActionButton key={"speedDialButton-"+i} {...speedDialButton} className={className} parent={this} mini={true} onMouseEnter={this.showSpeedDial} onMouseLeave={this.hideSpeedDial} useSpeedDial={false} isSpeedDialButton={true} />;
   },
 
   render: function () {
@@ -316,7 +329,7 @@ var FloatingActionButton = React.createClass({
     return (
       <div className={className}>
         {this.props.speedDialDirection === "up" ? speedDialButtons : undefined}
-        <FloatingActionButtonOriginal ref="button" {...other} onClick={this._handleClick} onMouseOver={this._handleMouseOver} onMouseOut={this._handleMouseOut} onFocus={this._handleFocus} onBlur={this._handleBlur}>
+        <FloatingActionButtonOriginal ref="button" {...other} onClick={this._handleClick} onMouseEnter={this._handleMouseEnter} onMouseLeave={this._handleMouseLeave} onFocus={this._handleFocus} onBlur={this._handleBlur}>
           {tooltip}
           {text}
         </FloatingActionButtonOriginal>
