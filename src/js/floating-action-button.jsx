@@ -156,7 +156,7 @@ var FloatingActionButton = React.createClass({
       speedDialVisibleTime: 2000,
       isSpeedDialButton: false,
       speedDialDirection: "up"
-    }
+    };
   },
 
   propTypes: {
@@ -287,7 +287,11 @@ var FloatingActionButton = React.createClass({
   togglePinnedSpeedDial: function() {
     var pinned = !this.state.speedDialIsPinned;
     this.setState({speedDialIsPinned: pinned});
-    (pinned) ? this.showSpeedDial() : this.hideSpeedDial();
+
+    if (pinned)
+        this.showSpeedDial();
+    else
+        this.hideSpeedDial();
   },
 
   _handleClick: function(e) {
@@ -295,9 +299,9 @@ var FloatingActionButton = React.createClass({
     if (this.props.onClick) this.props.onClick(e);
   },
 
-  renderSpeedDialButton(speedDialButton, i) {
+  renderSpeedDialButton: function(speedDialButton, i) {
     var className = (speedDialButton.className || "") + " mui-speed-dial-button";
-    return <FloatingActionButton key={"speedDialButton-"+i} {...speedDialButton} className={className} parent={this} mini={true} onMouseEnter={this.showSpeedDial} onMouseLeave={this.hideSpeedDial} useSpeedDial={false} isSpeedDialButton={true} />
+    return <FloatingActionButton key={"speedDialButton-"+i} {...speedDialButton} className={className} parent={this} mini={true} onMouseEnter={this.showSpeedDial} onMouseLeave={this.hideSpeedDial} useSpeedDial={false} isSpeedDialButton={true} />;
   },
 
   render: function () {
