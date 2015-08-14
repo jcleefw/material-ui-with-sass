@@ -246,20 +246,22 @@ var FloatingActionButton = React.createClass({
   },
 
   showSpeedDial: function() {
-    var self = this;
-    this.setState({showSpeedDial: true, willHideSpeedDial: false});
+    if (!this.props.disabled) {
+      var self = this;
+      this.setState({showSpeedDial: true, willHideSpeedDial: false});
 
-    // Cancel pending closure of the speed dial if the user's shown it again
-    if (this.state.speedDialTimeout) {
-        clearTimeout(this.state.speedDialTimeout);
+      // Cancel pending closure of the speed dial if the user's shown it again
+      if (this.state.speedDialTimeout) {
+          clearTimeout(this.state.speedDialTimeout);
+      }
+
+      ReactDOM.findDOMNode(this.refs.button).style.transform = "rotate(" + this.props.speedDialTransitionRotate + "deg)";
+      ReactDOM.findDOMNode(this.refs.button).style.WebkitTransform = "rotate(" + this.props.speedDialTransitionRotate + "deg)";
+      ReactDOM.findDOMNode(this.refs.button).style.msTransform = "rotate(" + this.props.speedDialTransitionRotate + "deg)";
+      _.delay(function() {
+        self.setState({text: self.props.speedDialOpenText});
+      }, self.props.speedDialTransitionTime);
     }
-
-    ReactDOM.findDOMNode(this.refs.button).style.transform = "rotate(" + this.props.speedDialTransitionRotate + "deg)";
-    ReactDOM.findDOMNode(this.refs.button).style.WebkitTransform = "rotate(" + this.props.speedDialTransitionRotate + "deg)";
-    ReactDOM.findDOMNode(this.refs.button).style.msTransform = "rotate(" + this.props.speedDialTransitionRotate + "deg)";
-    _.delay(function() {
-      self.setState({text: self.props.speedDialOpenText});
-    }, self.props.speedDialTransitionTime);
   },
 
   hideSpeedDial: function() {
@@ -339,10 +341,21 @@ var FloatingActionButton = React.createClass({
 
   componentDidMount: function() {
     if (this.props.tooltip) this._positionTooltip();
+    if (this.props.disabled) {
+      this.hideTooltip();
+      this.hideSpeedDial();
+    }
   },
 
   componentWillMount: function() {
     if (this.props.useSpeedDial) this.hideSpeedDial = _.debounce(this.hideSpeedDial, 300);
+  },
+
+  componentWillReceiveProps: function(nextProps) {
+    if (nextProps.disabled) {
+      this.hideTooltip();
+      this.hideSpeedDial();
+    }
   }
 });
 
